@@ -11,4 +11,5 @@ window.addEventListener("click",(e)=>{
     if(val==="circle-3"){
         alert("c-3 Red");
     }
+    
 });
