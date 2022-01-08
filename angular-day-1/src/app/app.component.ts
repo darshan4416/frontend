@@ -7,11 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-day-1';
-  author = 'darshan';
-  profile = 'coder';
-  hobbies = {
-    sport:'chess',
-    book:'the subtle art of not giving a f*ck'
-  };
+  nameArray: (string)[] = [];
+  name = '';
+  idx = 0;
+
+  onSave(){
+    this.nameArray.push(this.name);
+    console.log(this.nameArray);
+  }
   
 }

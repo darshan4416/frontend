@@ -1,5 +1,14 @@
-<p>child1 works!</p>
-<h1>This is {{gamer}}</h1>
-<label>Name:  </label>
-<input type="text" value="darshan">
-<button (click)="alertMe">Hit me</button>
+<p>Currency Convertor</p>
+<input type="text" [(ngModel)]="value">
+<label for="country">Choose a country:</label>
+
+<select name="country" id="country">
+  <option value="India">India</option>
+  <option value="Japan">Japan</option>
+  <option value="America">America</option>
+  <option value="Canada">Canada</option>
+</select>
+<br>
+<button (click)="alertMe()">Convert</button>
+<br>
+<span>{{convertedValue}}</span>

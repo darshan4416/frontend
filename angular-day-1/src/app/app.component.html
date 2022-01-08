@@ -1,6 +1,17 @@
-<h1>{{title}}</h1>
-<h1>{{author}}</h1>
-<h1>{{profile}}</h1>
-<h1>{{hobbies.sport}}</h1>
-<h1>{{hobbies.book}}</h1>
-<app-child1></app-child1>
+/*
+    1. event binding - D
+    2. data binding
+        a. from data to view - D
+        b. from view to data 
+    3. two-way-binding
+    4. ngfor, ngif
+
+    mini-app - (
+        application will take a name from input and after hitting button it will be shown in list
+    )
+*/
+
+<input type="text" [(ngModel)]="name">
+<button (click)="onSave()">save</button>
+
+<li *ngFor="let i of nameArray;let j=index">{{j}} {{i}}</li>

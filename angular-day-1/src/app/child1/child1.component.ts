@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Child1Component implements OnInit {
 
-  gamer = "rockstar games";
+  value = 1;
+  convertedValue = 0;
+  
+  user=['India', 'America']
+
+  alertMe(){
+    
+    this.convertedValue = this.value *60;
+
+  }
 
   constructor() { }
 
