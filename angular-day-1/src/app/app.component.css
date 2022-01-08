@@ -1,0 +1,29 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button{
+    cursor:pointer;
+    background-color: #0a5e99;
+    color:#fff;
+    border-radius: 10px;
+    width: 80px;
+    height: 30px;
+}
+h1{
+    color:#0a5e99;
+    margin-left:600px;
+}
+input{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+button{
+    margin-left:10px;
+}
+.box-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

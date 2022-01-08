@@ -1,17 +1,28 @@
-/*
-    1. event binding - D
-    2. data binding
-        a. from data to view - D
-        b. from view to data 
-    3. two-way-binding
-    4. ngfor, ngif
 
-    mini-app - (
-        application will take a name from input and after hitting button it will be shown in list
-    )
-*/
+<h1>Currency Converter</h1>
+<div class="box">
+    
+    <br>
+    <br>
+    <select placeholder="select country" [(ngModel)]="currIndex" >
+        <option value="">Select Country</option>
+        <option *ngFor="let country of data; let j=index;" value="{{j}}">{{country.name}}{{country.symbol}}</option>
+    </select>
 
-<input type="text" [(ngModel)]="name">
-<button (click)="onSave()">save</button>
+    <input type="text" [(ngModel)]="currValue" >
 
-<li *ngFor="let i of nameArray;let j=index">{{j}} {{i}}</li>
+    <select placeholder="select country" [(ngModel)]="tarIndex" >
+        <option value="">Select Country</option>
+        <option *ngFor="let country of data; let j=index;" value="{{j}}">{{country.name}}{{country.symbol}}</option>
+    </select>
+
+    <button (click)="handler()">Convert</button>
+
+   
+</div>
+<div class="box-2" *ngIf="res">
+    <div>
+      <h4>Converted value - </h4>
+    </div>
+    <h4> {{res}}</h4>
+  </div>
