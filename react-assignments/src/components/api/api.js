@@ -9,18 +9,12 @@ function Api() {
 
     function callApi(){
         let idx=0;
-       
-       
         // let retVal = fetch("https://jsonplaceholder.typicode.com/posts")
         // // We get the API response and receive data in JSON format
         // .then((response) => response.json())
         // .catch((error) => console.error(error));
-
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then((res) => setdata(res.data));
-
-    
-        
         // for(let i = 0; i<100; i++){
         //     console.log(retVal[0][i]);
         // }
@@ -56,10 +50,6 @@ function Api() {
                         </> 
                     );
                 })}
-                 
-            
-
-
         </>
     )
 }
