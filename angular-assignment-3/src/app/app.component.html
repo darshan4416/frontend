@@ -1,0 +1,29 @@
+<h2>Assignment-3</h2>
+<div>
+  <h3>User Data List</h3>
+
+  <input (click)="toggle('name')" type="radio" id="name" name="name" value="Sort by Name">
+  <label for="name">Sort by Name</label>
+
+  <input (click)="toggle('age')" type="radio" id="age" name="age" value="sort by age">
+  <label for="age">Sort by Age</label>
+
+
+  <div *ngIf="userData?.length > 0 ">
+      <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Body</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of userData;">
+              <td>{{user.id}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.DOB}}</td>
+            </tr>
+            </tbody>
+            </table>
+  </div>
