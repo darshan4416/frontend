@@ -1,11 +1,11 @@
 import './App.css';
+import Api from './components/api/api';
 import Currency from './components/currency/currency';
 
 function App() {
   return (
    <>
-    <h2>Currency Converter</h2>
-    <Currency />
+    <Api />
    </>
   );
 }

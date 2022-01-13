@@ -32,6 +32,7 @@ function Currency() {
     return (
         <div>
             {/* <label for="currency">Select currency</label> */}
+            <h2>Currency Converter</h2>
             <select  value={country} onChange={(e)=>setCountry(e.target.value)} name="currency" id="curr">
             <option value="rupee0₹">Indian Rupee</option>
             <option value="dollar1$">United States Dollar</option>
