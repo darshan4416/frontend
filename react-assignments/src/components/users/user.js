@@ -1,15 +1,22 @@
 import React from 'react';
-import { Persons} from './personApi';
 import { useState, useEffect } from 'react'
 
 function User() {
 
-   const [users, setusers] = useState(Persons);
+   const [users, setusers] = useState([]);
+
+   useEffect(async () =>{
+    const getData = await fetch('personApi.json')
+    console.log(getData)
+    const data = await getData.json()
+    console.log(data)
+    setusers(data);
+}, [])
     
     function handleName(e){
         
        users.sort((a,b)=>{
-           return a.name>b.name?1:-1;
+           return a.name.toLowerCase()>b.name.toLowerCase()?1:-1;
        })
     //    console.log(users);
        setusers([...users]);
