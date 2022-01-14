@@ -1,0 +1,22 @@
+<p>details works!</p>
+<div>
+    
+    <div *ngIf="users?.length > 0 ">
+        <table >
+            <thead>
+              <tr>
+                <th>idx</th>
+                <th>Name</th>
+                <th>Age</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of users;let j=index;">
+                <td>{{j+1}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+              </tr>
+              </tbody>
+              </table>
+    </div>
+</div>
